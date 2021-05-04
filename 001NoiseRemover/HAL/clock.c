@@ -1,49 +1,12 @@
-#include <cstdio>
-#include "stm32f4xx_hal.h"
+#include "clock.h"
+#include "stm32f4xx_hal.h"              // Keil::Device:STM32Cube HAL:Common
+
 
 /**
   * @brief System Clock Configuration
   * @retval None
   */
-void SystemClock_Config(void);
-
-/**
-* Global Variables
-*/
-uint32_t freq{};
-
-/**
-  * @brief main
-  * @retval 0
-  */
-int main(void){		
-	/*Init HAL*/
-	HAL_Init();
-	/*Config clock*/
-	SystemClock_Config();
-	/*Get current frequency*/
-	freq = HAL_RCC_GetHCLKFreq();
-	
-	/*Superloop*/
-	while(true){
-	}
-}
-
-/**
-  * @brief SysTic_Handler
-  * @retval None
-  */
-void SysTic_Handler(void){
-	HAL_IncTick();
-	HAL_SYSTICK_IRQHandler();
-}
-
-/**
-  * @brief System Clock Configuration
-  * @retval None
-  */
-void SystemClock_Config(void)
-{
+void SystemClock_Config(void){
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
 
@@ -64,7 +27,7 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.PLL.PLLQ = 7;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
-    //Error_Handler();
+//    Error_Handler();
   }
   /** Initializes the CPU, AHB and APB busses clocks 
   */
@@ -77,6 +40,6 @@ void SystemClock_Config(void)
 
   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_3) != HAL_OK)
   {
-    //Error_Handler();
+//    Error_Handler();
   }
 }

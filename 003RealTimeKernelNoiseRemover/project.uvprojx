@@ -176,7 +176,7 @@
             <GenPPlst>0</GenPPlst>
             <AdsCpuType>"Cortex-M4"</AdsCpuType>
             <RvctDeviceName></RvctDeviceName>
-            <mOS>0</mOS>
+            <mOS>1</mOS>
             <uocRom>0</uocRom>
             <uocRam>0</uocRam>
             <hadIROM>1</hadIROM>
@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>/Drivers;/Libs;Drivers;Libs;HAL;/HAL;Waveforms;/Waveforms</IncludePath>
+              <IncludePath>/Drivers;/Libs;Drivers;Libs;HAL;/HAL;Waveforms;/Waveforms;Filters;/Filters</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -397,6 +397,16 @@
               <FileType>1</FileType>
               <FilePath>.\Waveforms\waveforms.c</FilePath>
             </File>
+            <File>
+              <FileName>sine_generator.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Waveforms\sine_generator.c</FilePath>
+            </File>
+            <File>
+              <FileName>sine_generator.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Waveforms\sine_generator.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -415,6 +425,21 @@
           </Files>
         </Group>
         <Group>
+          <GroupName>Filters</GroupName>
+          <Files>
+            <File>
+              <FileName>lowpassFilter.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Filters\lowpassFilter.c</FilePath>
+            </File>
+            <File>
+              <FileName>lowpassFIlter.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Filters\lowpassFIlter.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>::CMSIS</GroupName>
         </Group>
         <Group>
@@ -426,6 +451,12 @@
 
   <RTE>
     <apis>
+      <api Capiversion="1.0.0" Cclass="CMSIS" Cgroup="RTOS" exclusive="1">
+        <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.7.0"/>
+        <targetInfos>
+          <targetInfo name="STM32F407"/>
+        </targetInfos>
+      </api>
       <api Capiversion="1.0.0" Cclass="Device" Cgroup="STM32Cube Framework" exclusive="1">
         <package name="STM32F4xx_DFP" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="2.14.0"/>
         <targetInfos>
@@ -441,6 +472,12 @@
         </targetInfos>
       </component>
       <component Cclass="CMSIS" Cgroup="DSP" Cvariant="Source" Cvendor="ARM" Cversion="1.8.0" condition="CMSIS DSP">
+        <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.7.0"/>
+        <targetInfos>
+          <targetInfo name="STM32F407"/>
+        </targetInfos>
+      </component>
+      <component Capiversion="1.0.0" Cclass="CMSIS" Cgroup="RTOS" Csub="Keil RTX" Cvendor="ARM" Cversion="4.82.0" condition="RTOS RTX">
         <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.7.0"/>
         <targetInfos>
           <targetInfo name="STM32F407"/>
@@ -490,6 +527,14 @@
       </component>
     </components>
     <files>
+      <file attr="config" category="source" name="CMSIS\RTOS\RTX\Templates\RTX_Conf_CM.c" version="4.70.1">
+        <instance index="0">RTE\CMSIS\RTX_Conf_CM.c</instance>
+        <component Capiversion="1.0.0" Cclass="CMSIS" Cgroup="RTOS" Csub="Keil RTX" Cvendor="ARM" Cversion="4.82.0" condition="RTOS RTX" isDefaultVariant="1"/>
+        <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.7.0"/>
+        <targetInfos>
+          <targetInfo name="STM32F407"/>
+        </targetInfos>
+      </file>
       <file attr="config" category="header" name="CMSIS\Driver\Config\RTE_Device.h" version="2.4.5">
         <instance index="0">RTE\Device\STM32F407IGHx\RTE_Device.h</instance>
         <component Capiversion="1.0.0" Cclass="Device" Cgroup="STM32Cube Framework" Csub="Classic" Cvendor="Keil" Cversion="1.7.6" condition="STM32F4 Framework Classic"/>

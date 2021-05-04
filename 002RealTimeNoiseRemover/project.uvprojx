@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>/Drivers;/Libs;Drivers;Libs;HAL;/HAL;Waveforms;/Waveforms</IncludePath>
+              <IncludePath>/Drivers;/Libs;Drivers;Libs;HAL;/HAL;Waveforms;/Waveforms;Filters;/Filters</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -397,6 +397,16 @@
               <FileType>1</FileType>
               <FilePath>.\Waveforms\waveforms.c</FilePath>
             </File>
+            <File>
+              <FileName>sine_generator.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Waveforms\sine_generator.c</FilePath>
+            </File>
+            <File>
+              <FileName>sine_generator.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Waveforms\sine_generator.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -411,6 +421,21 @@
               <FileName>clock.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\HAL\clock.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Filters</GroupName>
+          <Files>
+            <File>
+              <FileName>lowpassFilter.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Filters\lowpassFilter.c</FilePath>
+            </File>
+            <File>
+              <FileName>lowpassFIlter.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Filters\lowpassFIlter.h</FilePath>
             </File>
           </Files>
         </Group>

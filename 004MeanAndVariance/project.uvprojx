@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>/Drivers;/Libs;Drivers;Libs;HAL;/HAL;Waveforms;/Waveforms</IncludePath>
+              <IncludePath>/Drivers;/Libs;Drivers;Libs;HAL;/HAL;Waveforms;/Waveforms;Algorithms;/Algorithms</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -413,6 +413,9 @@
               <FilePath>.\HAL\clock.c</FilePath>
             </File>
           </Files>
+        </Group>
+        <Group>
+          <GroupName>Algorithms</GroupName>
         </Group>
         <Group>
           <GroupName>::CMSIS</GroupName>

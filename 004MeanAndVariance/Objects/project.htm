@@ -3,9 +3,9 @@
 <title>Static Call Graph - [.\Objects\project.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\project.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Tue May 04 11:35:12 2021
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Tue May 04 12:33:06 2021
 <BR><P>
-<H3>Maximum Stack Usage =        200 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        176 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
 __rt_entry_main &rArr; main &rArr; SystemClock_Config &rArr; HAL_RCC_ClockConfig &rArr; HAL_RCC_GetSysClockFreq &rArr; __aeabi_uldivmod
 <P>
@@ -147,9 +147,9 @@ Global Symbols
 
 <P><STRONG><a name="[8c]"></a>__scatterload_null</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
 
-<P><STRONG><a name="[8d]"></a>__decompress</STRONG> (Thumb, 90 bytes, Stack size unknown bytes, __dczerorl2.o(!!dczerorl2), UNUSED)
+<P><STRONG><a name="[8d]"></a>__decompress</STRONG> (Thumb, 100 bytes, Stack size unknown bytes, __dclz77c.o(!!dclz77c), UNUSED)
 
-<P><STRONG><a name="[8e]"></a>__decompress1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __dczerorl2.o(!!dczerorl2), UNUSED)
+<P><STRONG><a name="[8e]"></a>__decompress2</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __dclz77c.o(!!dclz77c), UNUSED)
 
 <P><STRONG><a name="[8f]"></a>__scatterload_zeroinit</STRONG> (Thumb, 28 bytes, Stack size unknown bytes, __scatter_zi.o(!!handler_zi), UNUSED)
 
@@ -240,7 +240,7 @@ Global Symbols
 <P><STRONG><a name="[ac]"></a>__rt_entry_postsh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000009))
 
 <P><STRONG><a name="[6b]"></a>__rt_entry_main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000D))
-<BR><BR>[Stack]<UL><LI>Max Depth = 200 + Unknown Stack Size
+<BR><BR>[Stack]<UL><LI>Max Depth = 176 + Unknown Stack Size
 <LI>Call Chain = __rt_entry_main &rArr; main &rArr; SystemClock_Config &rArr; HAL_RCC_ClockConfig &rArr; HAL_RCC_GetSysClockFreq &rArr; __aeabi_uldivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -584,8 +584,7 @@ Global Symbols
 <P><STRONG><a name="[86]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 4 bytes, rt_memclr_w.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = __aeabi_memclr4
 </UL>
-<BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arm_fir_init_f32
-<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
 <P><STRONG><a name="[b0]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 4 bytes, rt_memclr_w.o(.text), UNUSED)
@@ -693,7 +692,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
-<P><STRONG><a name="[88]"></a>HAL_RCC_GetHCLKFreq</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f4xx_hal_rcc.o(i.HAL_RCC_GetHCLKFreq))
+<P><STRONG><a name="[89]"></a>HAL_RCC_GetHCLKFreq</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f4xx_hal_rcc.o(i.HAL_RCC_GetHCLKFreq))
 <BR><BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -733,12 +732,6 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
 </UL>
 
-<P><STRONG><a name="[8a]"></a>PlotInputOutputSignal</STRONG> (Thumb, 66 bytes, Stack size 12 bytes, main.o(i.PlotInputOutputSignal))
-<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = PlotInputOutputSignal
-</UL>
-<BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
 <P><STRONG><a name="[d]"></a>SysTick_Handler</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, main.o(i.SysTick_Handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = SysTick_Handler &rArr; HAL_SYSTICK_IRQHandler
 </UL>
@@ -760,29 +753,36 @@ Global Symbols
 <P><STRONG><a name="[5f]"></a>SystemInit</STRONG> (Thumb, 82 bytes, Stack size 0 bytes, system_stm32f4xx.o(i.SystemInit))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f407xx.o(.text)
 </UL>
-<P><STRONG><a name="[89]"></a>arm_fir_f32</STRONG> (Thumb, 134 bytes, Stack size 40 bytes, filteringfunctions.o(i.arm_fir_f32))
-<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = arm_fir_f32
+<P><STRONG><a name="[8a]"></a>arm_mean_f32</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, statisticsfunctions.o(i.arm_mean_f32))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = arm_mean_f32
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[87]"></a>arm_fir_init_f32</STRONG> (Thumb, 40 bytes, Stack size 24 bytes, filteringfunctions.o(i.arm_fir_init_f32))
-<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = arm_fir_init_f32 &rArr; __aeabi_memclr4
+<P><STRONG><a name="[87]"></a>arm_std_f32</STRONG> (Thumb, 54 bytes, Stack size 20 bytes, statisticsfunctions.o(i.arm_std_f32))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = arm_std_f32 &rArr; arm_var_f32
 </UL>
-<BR>[Calls]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<BR>[Calls]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arm_var_f32
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[6c]"></a>main</STRONG> (Thumb, 80 bytes, Stack size 24 bytes, main.o(i.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 200<LI>Call Chain = main &rArr; SystemClock_Config &rArr; HAL_RCC_ClockConfig &rArr; HAL_RCC_GetSysClockFreq &rArr; __aeabi_uldivmod
+<P><STRONG><a name="[88]"></a>arm_var_f32</STRONG> (Thumb, 132 bytes, Stack size 12 bytes, statisticsfunctions.o(i.arm_var_f32))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = arm_var_f32
 </UL>
-<BR>[Calls]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arm_fir_init_f32
-<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arm_fir_f32
+<BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arm_std_f32
+<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[6c]"></a>main</STRONG> (Thumb, 56 bytes, Stack size 0 bytes, main.o(i.main))
+<BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = main &rArr; SystemClock_Config &rArr; HAL_RCC_ClockConfig &rArr; HAL_RCC_GetSysClockFreq &rArr; __aeabi_uldivmod
+</UL>
+<BR>[Calls]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arm_var_f32
+<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arm_std_f32
+<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arm_mean_f32
 <LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetHCLKFreq
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetHCLKFreq
 <LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
-<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PlotInputOutputSignal
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>

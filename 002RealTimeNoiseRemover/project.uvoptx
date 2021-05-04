@@ -154,28 +154,6 @@
         </SetRegEntry>
       </TargetDriverDllRegistry>
       <Breakpoint/>
-      <WatchWindow1>
-        <Ww>
-          <count>0</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>freq,0x0A</ItemText>
-        </Ww>
-        <Ww>
-          <count>1</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>counter,0x0A</ItemText>
-        </Ww>
-        <Ww>
-          <count>2</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>inputSample</ItemText>
-        </Ww>
-        <Ww>
-          <count>3</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>outputSample</ItemText>
-        </Ww>
-      </WatchWindow1>
       <Tracepoint>
         <THDelay>0</THDelay>
       </Tracepoint>
@@ -221,13 +199,23 @@
       <LogicAnalyzers>
         <Wi>
           <IntNumber>0</IntNumber>
-          <FirstString>`inputSample</FirstString>
-          <SecondString>0000800000000040961CF5BF00000040961CF53F00000000000000000000000000000000696E70757453616D706C650000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004100000001000000000000000000E03F1500000000000000000000000000000000000000980C0008</SecondString>
+          <FirstString>`sine</FirstString>
+          <SecondString>FF000000000000000000D0C00000000080B1CF400000000000000000000000000000000073696E65000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004100000001000000000000000000D03F150000000000000000000000000000000000000070130008</SecondString>
         </Wi>
         <Wi>
           <IntNumber>1</IntNumber>
-          <FirstString>`outputSample</FirstString>
-          <SecondString>00000000000000601508F0BF000000601508F03F000000000000000000000000000000006F757470757453616D706C6500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004100000002000000000000000000E03F1500000000000000000000000000000000000000940C0008</SecondString>
+          <FirstString>`noise</FirstString>
+          <SecondString>00800000000000000055B5C0000000000054B540000000000000000000000000000000006E6F6973650000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004100000002000000000000000000D03F150000000000000000000000000000000000000070130008</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>2</IntNumber>
+          <FirstString>`disturbed</FirstString>
+          <SecondString>00008000000000008049D5C0000000000026D5400000000000000000000000000000000064697374757262656400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004100000003000000000000000000D03F150000000000000000000000000000000000000070130008</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>3</IntNumber>
+          <FirstString>`filtered</FirstString>
+          <SecondString>00000000000000000033CFC0000000008002CF400000000000000000000000000000000066696C74657265640000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004100000004000000000000000000D03F150000000000000000000000000000000000000070130008</SecondString>
         </Wi>
       </LogicAnalyzers>
       <SystemViewers>
@@ -260,7 +248,7 @@
 
   <Group>
     <GroupName>App</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -296,17 +284,41 @@
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
+    <File>
+      <GroupNumber>2</GroupNumber>
+      <FileNumber>3</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\Waveforms\sine_generator.c</PathWithFileName>
+      <FilenameWithoutPath>sine_generator.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>2</GroupNumber>
+      <FileNumber>4</FileNumber>
+      <FileType>5</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\Waveforms\sine_generator.h</PathWithFileName>
+      <FilenameWithoutPath>sine_generator.h</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
   </Group>
 
   <Group>
     <GroupName>HAL</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>3</GroupNumber>
-      <FileNumber>3</FileNumber>
+      <FileNumber>5</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -318,13 +330,45 @@
     </File>
     <File>
       <GroupNumber>3</GroupNumber>
-      <FileNumber>4</FileNumber>
+      <FileNumber>6</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>.\HAL\clock.c</PathWithFileName>
       <FilenameWithoutPath>clock.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+  </Group>
+
+  <Group>
+    <GroupName>Filters</GroupName>
+    <tvExp>0</tvExp>
+    <tvExpOptDlg>0</tvExpOptDlg>
+    <cbSel>0</cbSel>
+    <RteFlg>0</RteFlg>
+    <File>
+      <GroupNumber>4</GroupNumber>
+      <FileNumber>7</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\Filters\lowpassFilter.c</PathWithFileName>
+      <FilenameWithoutPath>lowpassFilter.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>4</GroupNumber>
+      <FileNumber>8</FileNumber>
+      <FileType>5</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\Filters\lowpassFIlter.h</PathWithFileName>
+      <FilenameWithoutPath>lowpassFIlter.h</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

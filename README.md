@@ -4,6 +4,10 @@ Digital Signal Processing on ARM : FFT, Filter Design, Convolution, IIR, FIR, CM
 
 Practical DSP in Python : Over 70 examples, FFT,Filter Design, IIR,FIR, Window Filters,Convolution,Linear Systems etc
 
+# Bonus
+
+Also added some other things from DSP Stack Exchange and The Audio Programmer.
+
 # Links
  - https://www.udemy.com/course/arm-cortex-dsp
  - https://www.udemy.com/course/python-dsp

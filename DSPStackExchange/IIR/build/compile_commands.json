@@ -1,0 +1,12 @@
+[
+{
+  "directory": "C:/Users/fpolo/Downloads/Franco/Courses/Udemy/UdemyDSPFromGroundUpOnARMProcessors/Python/DSPStackExchange/IIR/build",
+  "command": "C:\\MinGW\\bin\\mingw32-g++.exe   -g -o CMakeFiles\\mainApp.dir\\libs\\iir.cpp.obj -c C:\\Users\\fpolo\\Downloads\\Franco\\Courses\\Udemy\\UdemyDSPFromGroundUpOnARMProcessors\\Python\\DSPStackExchange\\IIR\\libs\\iir.cpp",
+  "file": "C:/Users/fpolo/Downloads/Franco/Courses/Udemy/UdemyDSPFromGroundUpOnARMProcessors/Python/DSPStackExchange/IIR/libs/iir.cpp"
+},
+{
+  "directory": "C:/Users/fpolo/Downloads/Franco/Courses/Udemy/UdemyDSPFromGroundUpOnARMProcessors/Python/DSPStackExchange/IIR/build",
+  "command": "C:\\MinGW\\bin\\mingw32-g++.exe   -g -o CMakeFiles\\mainApp.dir\\src\\main.cpp.obj -c C:\\Users\\fpolo\\Downloads\\Franco\\Courses\\Udemy\\UdemyDSPFromGroundUpOnARMProcessors\\Python\\DSPStackExchange\\IIR\\src\\main.cpp",
+  "file": "C:/Users/fpolo/Downloads/Franco/Courses/Udemy/UdemyDSPFromGroundUpOnARMProcessors/Python/DSPStackExchange/IIR/src/main.cpp"
+}
+]

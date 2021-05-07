@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/fpolo/Downloads/Franco/Courses/Udemy/UdemyDSPFromGroundUpOnARMProcessors/Python/DSPStackExchange/IIR/libs/iir.hpp
+cstdint
+-
+
+C:/Users/fpolo/Downloads/Franco/Courses/Udemy/UdemyDSPFromGroundUpOnARMProcessors/Python/DSPStackExchange/IIR/src/main.cpp
+cstdio
+-
+iostream
+-
+array
+-
+../libs/iir.hpp
+C:/Users/fpolo/Downloads/Franco/Courses/Udemy/UdemyDSPFromGroundUpOnARMProcessors/Python/DSPStackExchange/IIR/libs/iir.hpp
+

@@ -33,6 +33,7 @@ def calc_first_difference(sig_src_arr,sig_dest_arr):
 if __name__ == "__main__":
     output_signal =[None]*320
     calc_first_difference(sigs.InputSignal_1kHz_15kHz,output_signal)
+    
     # Plot
     style.use('ggplot')
     #style.use('dark_background')

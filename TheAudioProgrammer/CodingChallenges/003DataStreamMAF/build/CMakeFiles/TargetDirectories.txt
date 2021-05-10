@@ -1,0 +1,3 @@
+C:/Users/fpolo/Downloads/Franco/Courses/Udemy/UdemyDSPFromGroundUpOnARMProcessors/TheAudioProgrammer/CodingChallenges/003DataStreamMAF/build/CMakeFiles/mainApp.dir
+C:/Users/fpolo/Downloads/Franco/Courses/Udemy/UdemyDSPFromGroundUpOnARMProcessors/TheAudioProgrammer/CodingChallenges/003DataStreamMAF/build/CMakeFiles/edit_cache.dir
+C:/Users/fpolo/Downloads/Franco/Courses/Udemy/UdemyDSPFromGroundUpOnARMProcessors/TheAudioProgrammer/CodingChallenges/003DataStreamMAF/build/CMakeFiles/rebuild_cache.dir

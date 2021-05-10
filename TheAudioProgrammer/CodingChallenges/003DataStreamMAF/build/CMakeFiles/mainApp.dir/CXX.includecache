@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/fpolo/Downloads/Franco/Courses/Udemy/UdemyDSPFromGroundUpOnARMProcessors/TheAudioProgrammer/CodingChallenges/003DataStreamMAF/src/main.cpp
+cstdio
+-
+iostream
+-
+queue
+-
+

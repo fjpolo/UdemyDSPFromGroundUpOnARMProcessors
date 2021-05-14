@@ -12,3 +12,4 @@
  ## References
  - https://wwwalt.tu-ilmenau.de/mt/lehrveranstaltungen/lehre-fuer-master-mt/multirate-signal-processing/?cHash=34752029d18003fbb7b3355763bb6588
  - https://github.com/TUIlmenauAMS/Jupyter_notebooks_AMS/tree/master/Multirate_Signal_Processing
+ - https://www.youtube.com/watch?v=MwlMJuGWgqw&list=PL6QnpHKwdPYiQmq8PcGvx-EpLFrVmYMOW

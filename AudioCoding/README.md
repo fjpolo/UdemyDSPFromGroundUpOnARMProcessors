@@ -19,3 +19,4 @@ Contents:
 ## References
 - https://wwwalt.tu-ilmenau.de/zh/mt/lehrveranstaltungen/lehre-fuer-master-mt/audio-coding/
 - https://github.com/TUIlmenauAMS/Jupyter_notebooks_AMS/tree/master/Audio_Coding
+- https://www.youtube.com/watch?v=Tp96ICZ_pMg&list=PL6QnpHKwdPYjRWkWLswWmxFrDmj6leRwh

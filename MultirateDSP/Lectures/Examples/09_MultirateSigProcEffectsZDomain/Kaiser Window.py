@@ -20,7 +20,7 @@ fs, x = wav.read('sc03.wav')
 
 # In[2]:
 
-from sound import sound
+from Sound import sound
 sound(x, fs)
 
 
@@ -28,7 +28,7 @@ sound(x, fs)
 
 # In[3]:
 
-from freqz import freqz
+from Freqz import freqz
 freqz(x)
 
 

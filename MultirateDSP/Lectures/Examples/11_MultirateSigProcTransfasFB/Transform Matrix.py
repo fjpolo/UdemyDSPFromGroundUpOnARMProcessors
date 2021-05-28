@@ -20,7 +20,7 @@ T
 
 # In[2]:
 
-from freqz import freqz
+from Freqz import freqz
 freqz(np.flipud(T[:,1]), whole=True)
 
 

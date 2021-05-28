@@ -213,8 +213,8 @@ def Task123():
 
     # Downsample
     speech_32kHz_reconstructed = speech_32kHz_filtered[::4]
-    # sd.play(speech_32kHz_reconstructed, 8000)  
-    # time.sleep(10)
+    sd.play(speech_32kHz_reconstructed, 8000)  
+    time.sleep(10)
 
     # Plot 
     style.use("dark_background")
